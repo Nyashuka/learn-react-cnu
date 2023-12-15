@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
+import useChangeTabName from "../hooks/useChangeTabName";
 
 export default function Home() {
+  useChangeTabName("Home");
+
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {

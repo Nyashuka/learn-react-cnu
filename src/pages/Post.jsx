@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import useChangeTabName from "../hooks/useChangeTabName";
 
 export default function Post() {
+  useChangeTabName("Post");
+
   const [post, setPost] = useState({});
   const { id } = useParams();
 

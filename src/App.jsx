@@ -5,6 +5,8 @@ import ContactUs from "./pages/ContactUs";
 import Main from "./layouts/Main";
 import Post from "./pages/Post";
 import { useDarkTheme } from "./hooks/useDarkTheme";
+
+
 const router = createBrowserRouter([
   {
     path: "/",

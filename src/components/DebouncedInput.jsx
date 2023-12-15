@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import useDebounce from "../hooks/useDebounce"
 
 const DebouncedInput = () => {
   const [inputValue, setInputValue] = useState("");
@@ -8,13 +9,13 @@ const DebouncedInput = () => {
   };
 
   // Uncomment this code to see how it works. The only thing you need to create is useDebounce hook
-  // const debouncedValue = useDebounce(inputValue, 2000);
+  const debouncedValue = useDebounce(inputValue, 2000);
 
-  // useEffect(() => {
-  //   console.log(
-  //     "Just for checking. This console must runs after 2 seconds of inactivity"
-  //   );
-  // }, [debouncedValue]);
+  useEffect(() => {
+    console.log(
+      "Just for checking. This console must runs after 2 seconds of inactivity"
+    );
+  }, [debouncedValue]);
 
   return (
     <>

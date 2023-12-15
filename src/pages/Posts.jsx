@@ -1,7 +1,10 @@
 import PostCard from "../components/PostCard";
 import useFetch from "../hooks/useFetch";
+import useChangeTabName from "../hooks/useChangeTabName";
 
 export default function Posts() {
+  useChangeTabName("Posts");
+
   const {
     data: posts,
     loading,
